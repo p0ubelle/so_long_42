@@ -6,7 +6,7 @@
 /*   By: rvasseur <rvasseur@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 13:36:53 by rvasseur          #+#    #+#             */
-/*   Updated: 2026/01/30 18:55:27 by rvasseur         ###   ########.fr       */
+/*   Updated: 2026/02/06 05:14:03 by rvasseur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,4 +39,3 @@ int	check_components(t_game *game)
 	}
 	return (1);
 }
-

@@ -6,12 +6,11 @@
 /*   By: rvasseur <rvasseur@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 00:21:03 by rvasseur          #+#    #+#             */
-/*   Updated: 2026/02/03 22:13:14 by rvasseur         ###   ########.fr       */
+/*   Updated: 2026/02/05 13:41:50 by rvasseur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../so_long.h"
-
 
 void	init_image(t_game *game, t_img *img)
 {

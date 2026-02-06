@@ -6,7 +6,7 @@
 /*   By: rvasseur <rvasseur@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 20:24:16 by rvasseur          #+#    #+#             */
-/*   Updated: 2026/02/02 18:48:05 by rvasseur         ###   ########.fr       */
+/*   Updated: 2026/02/04 00:11:21 by rvasseur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,5 @@ int	check_map(t_game *game, char *f_path)
 		return (write(2, "Error\nMap trop grande", 15 + 7), -1);
 	else if (map_validate(game) != 1)
 		return (-1);
-	game->exit_visible = 0;
 	return (1);
 }

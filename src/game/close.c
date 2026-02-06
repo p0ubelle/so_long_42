@@ -1,27 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_rect.c                                       :+:      :+:    :+:   */
+/*   close.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rvasseur <rvasseur@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/29 13:35:04 by rvasseur          #+#    #+#             */
-/*   Updated: 2026/02/06 05:09:33 by rvasseur         ###   ########.fr       */
+/*   Created: 2026/02/06 01:58:48 by rvasseur          #+#    #+#             */
+/*   Updated: 2026/02/06 02:01:30 by rvasseur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../so_long.h"
+#include "../so_long.h"
 
-int	check_rect(t_game *game)
+int	close_game(t_game *game)
 {
-	int	y;
-
-	y = 0;
-	while (y < game->map_y)
-	{
-		if ((int)ft_strlen(game->map[y]) != game->map_x)
-			return (-1);
-		y++;
-	}
-	return (1);
+	map_free(game->map);
+	exit(0);
+	return (0);
 }

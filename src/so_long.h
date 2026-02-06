@@ -6,7 +6,7 @@
 /*   By: rvasseur <rvasseur@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 20:22:36 by rvasseur          #+#    #+#             */
-/*   Updated: 2026/02/03 21:27:19 by rvasseur         ###   ########.fr       */
+/*   Updated: 2026/02/06 02:04:56 by rvasseur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,23 +31,6 @@
 # define KEY_DOWN 65364
 # define KEY_RIGHT 65363
 
-typedef struct s_game
-{
-	void	*mlx_ptr;
-	void	*win_ptr;
-	char	**map;
-	int		player_count;
-	int		collect_count;
-	int		collect_taken;
-	int		exit_count;
-	int		exit_visible;
-	int		plr_x;
-	int		plr_y;
-	int		map_x;
-	int		map_y;
-	int		moves_count;
-}			t_game;
-
 typedef struct s_img
 {
 	void	*img_wall;
@@ -58,6 +41,23 @@ typedef struct s_img
 	int		img_width;
 	int		img_height;
 }			t_img;
+
+typedef struct s_game
+{
+	void	*mlx_ptr;
+	void	*win_ptr;
+	t_img	img;
+	char	**map;
+	int		player_count;
+	int		collect_count;
+	int		collect_taken;
+	int		exit_count;
+	int		plr_x;
+	int		plr_y;
+	int		map_x;
+	int		map_y;
+	int		moves_count;
+}			t_game;
 
 int			main(int argc, char *argv[]);
 
@@ -78,11 +78,13 @@ void		put_image(t_game *game, t_img *img, int x, int y);
 void		render_map(t_game *game, t_img *img);
 
 // ______ PLR ______
-void		input_begin(int key_nb, t_game *game);
+int			input_begin(int key_nb, t_game *game);
 void		player_move(int x, int y, t_game *game);
 
 // ______ MISC ______
 int			ft_strcmp(char *s1, char *s2);
+int			close_game(t_game *game);
 int			handle_error(char *msg, t_game *game, t_img *img);
+void		map_free(char **new_map);
 
 #endif
